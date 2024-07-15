@@ -8,4 +8,4 @@ def uppercase(c):
             x = ord(ch) +32
             y = chr(x)
             g = g + y
-    print(g)
+    print("{0}".format(g))
