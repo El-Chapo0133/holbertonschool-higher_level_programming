@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
-def isLower(c):
+def islower(c):
     return ord(c) < 65 and ord(c) > 90
