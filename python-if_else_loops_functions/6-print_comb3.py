@@ -6,4 +6,3 @@ for i in range(10):
             print("{0}".format(str(i) + str(j + i + 1)))
         else:
             print("{0}, ".format(str(i) + str(j + i + 1)), end='')
-print()
