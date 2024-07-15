@@ -56,5 +56,3 @@ class Square():
             for j in range(self._size):
                 print("#", end='')
             print()
-
-i = Square(3, (3, 3))
