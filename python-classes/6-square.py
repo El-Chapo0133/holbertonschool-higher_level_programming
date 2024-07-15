@@ -6,13 +6,16 @@ class Square():
     """This is the best square class possible woaw"""
 
     def __init__(self, new_size=0, position=(0, 0)):
+        print(type(position))
         if type(new_size) is not int:
             raise TypeError("size must be an integer")
         if new_size < 0:
             raise ValueError("size must be >= 0")
         self._size = new_size
 
-        if type(position) is not (int, int):
+        if type(position) is not tuple:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if type(position[0]) is not int or type(position[1]) is not int:
             raise TypeError("position must be a tuple of 2 positive integers")
         self._position = position
 
@@ -37,7 +40,9 @@ class Square():
 
     @position.setter
     def position(self, position):
-        if type(position) is not (int, int):
+        if type(position) is not tuple:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if type(position[0]) is not int or type(position[1]) is not int:
             raise TypeError("position must be a tuple of 2 positive integers")
         self._position = position
 
@@ -51,3 +56,5 @@ class Square():
             for j in range(self._size):
                 print("#", end='')
             print()
+
+i = Square(3, (3, 3))
