@@ -2,7 +2,8 @@
 
 def uppercase(c):
     for i in c:
+        char = i
         if ord(i) > 96 and ord(i) < 123:
-            print("{0}".format(chr(ord(i) - 32)), end='')
-        else:
-            print(i)
+            char = char - 32 
+        print(char)
+print()
