@@ -4,17 +4,16 @@
 
 class Square():
     """This is the best square class possible woaw"""
-    __size = 0
 
     def __init__(self, new_size=0):
         if type(new_size) is not int:
             raise TypeError("size must be an integer")
         if new_size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = new_size
+        self._size = new_size
 
     def area(self):
-        return self.__size * self.__size
+        return self._size * self._size
 
     def size(self):
         return self.__size
@@ -23,4 +22,4 @@ class Square():
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = value
+        self._size = value
