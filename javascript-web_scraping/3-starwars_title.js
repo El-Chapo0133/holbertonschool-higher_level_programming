@@ -12,7 +12,7 @@ request(url, (err, res, body) => {
   if (err) {
     throw new Error(err);
   }
-  if (res.statusCode != 200) {
+  if (res.statusCode !== 200) {
     throw new Error('Status code not 200 : ' + res.statusCode);
   }
   console.log(JSON.parse(body).title);
