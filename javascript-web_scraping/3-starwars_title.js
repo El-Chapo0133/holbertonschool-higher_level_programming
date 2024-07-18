@@ -15,7 +15,8 @@ request(url, (err, res, body) => {
   if (res.statusCode != 200) {
     throw new Error('Status code not 200 : ' + res.statusCode);
   }
-  body.json().then(data => {
-    console.log(data.title);
-  });
+  console.log(data);
+  //body.json().then(data => {
+  //  console.log(data.title);
+  //});
 });
