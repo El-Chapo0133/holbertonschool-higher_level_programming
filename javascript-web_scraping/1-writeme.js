@@ -9,10 +9,4 @@ if (args.length < 4) {
 const filename = args[2];
 const content = args[3];
 
-fs.writeFile(filename, content, err => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-  //file written successfully
-});
+fs.writeFilesync(filename, content);
