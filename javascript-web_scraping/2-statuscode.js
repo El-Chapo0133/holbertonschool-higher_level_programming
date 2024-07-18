@@ -9,5 +9,5 @@ if (args.length < 3) {
 const url = args[2];
 
 request(url, (err, res, body) => {
-	console.log('code: ', res.statusCode);
+	console.log('code:', res.statusCode);
 });
