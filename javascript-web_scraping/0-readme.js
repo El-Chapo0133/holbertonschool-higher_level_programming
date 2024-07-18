@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 let args = process.argv;
 if (args.length < 3) {
 	throw new Error("Not enough arguments");
