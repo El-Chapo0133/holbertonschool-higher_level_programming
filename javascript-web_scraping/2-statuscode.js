@@ -8,6 +8,8 @@ if (args.length < 3) {
 
 const url = args[2];
 
-request(url, (err, res, body) => {
-	console.log('code:', res.statusCode);
+request(url, (err, res, _) => {
+  if (err)
+    throw new Error(err);
+  console.log('code:', res.statusCode);
 });
