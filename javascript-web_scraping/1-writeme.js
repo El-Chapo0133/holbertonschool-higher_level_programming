@@ -9,4 +9,4 @@ if (args.length < 4) {
 const filename = args[2];
 const content = args[3];
 
-fs.writeFilesync(filename, content);
+fs.writeFileSync(filename, content);
