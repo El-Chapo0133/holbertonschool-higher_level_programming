@@ -1,2 +1,2 @@
 -- this is a heading comment
-SELECT score, name FROM second_table ORDER score;
+SELECT score, name FROM second_table ORDER BY score;
