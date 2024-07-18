@@ -1,2 +1,2 @@
 -- this is a heading comment
-.schema first_table;
+show columns from first_table;
