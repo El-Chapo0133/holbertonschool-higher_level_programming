@@ -1,7 +1,7 @@
 -- this is a heading comment
 
-select * 
-	from information_schema.columns 
-	where table_name = 'first_table'
-	order by ordinal_position
+SELECT * 
+	FROM information_schema.columns 
+	WHERE table_name = 'first_table'
+	ORDER by ordinal_position
 
