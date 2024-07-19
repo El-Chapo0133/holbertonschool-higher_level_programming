@@ -21,7 +21,7 @@ request.get(url, (err, res, body) => {
   const json = JSON.parse(body);
   for (let i = 0; i < json.results.length; i++) {
     const film = json.results[i];
-    if (fil.character = 'https://swapi-api.hbtn.io/api/people/18/') { count++; }
+    if (film.character = 'https://swapi-api.hbtn.io/api/people/18/') { count++; }
     /*film.characters.forEach(character => {
       request(character, (err, res, characterBody) => {
         if (err) { throw new Error(err); } 
