@@ -23,13 +23,15 @@ async function doStuff () {
   const body = await req(url).catch(err => { return 0; });
   const json = JSON.parse(body);
 
+  let allPRomises = [];
   for (let i = 0; i < json.results.length; i++) {
     const film = json.results[i];
     for (let j = 0; j < film.characters.length; j++) {
       const character = film.characters[j];
-      const characterBody = req(character).catch(err => {  });
-      const characterJson = JSON.parse(characterBody);
-      if (characterJson.name === characterToFind) { count++; }
+      allPromises.push(req(character).then(characterBody => {
+        const characterJson = JSON.parse(characterBody);
+        if (characterJson.name === characterToFind) { count++; }
+      }).catch(err => {  }));
     }
   }
   /*await request.get(url, (err, res, body) => {
