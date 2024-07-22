@@ -12,10 +12,10 @@ request(url, (err, res, body) => {
   if (err) { console.error(err); }
   if (res.statusCode !== 200) { console.error(res.statusCode); }
   const values = JSON.parse(body);
-  let result = {};
+  const result = {};
   values.forEach(value => {
     if (value.completed) {
-      if (result[value.userId] == undefined) { result[value.userId] = 0; }
+      if (result[value.userId] === undefined) { result[value.userId] = 0; }
       result[value.userId]++;
     }
   });
