@@ -27,7 +27,7 @@ async function doStuff () {
     const film = json.results[i];
     for (let j = 0; j < film.characters.length; j++) {
       const character = film.characters[j];
-      const characterBody = await req(character).catch(err => { return 0; });
+      const characterBody = req(character).catch(err => {  });
       const characterJson = JSON.parse(characterBody);
       if (characterJson.name === characterToFind) { count++; }
     }
