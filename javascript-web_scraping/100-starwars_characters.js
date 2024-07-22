@@ -21,7 +21,7 @@ async function doStuff() {
     const film = json.results[id];
     film.characters.forEach(character => {
       request(character, (err, res, characterBody) => {
-        if (err) { throw new Error(err); } 
+        if (err) { throw new Error(err); }
         if (res.statusCode !== 200) { throw new Error('Status Code != 200 : ' + res.statusCode); }
         console.log(JSON.parse(characterBody).name);
       });
