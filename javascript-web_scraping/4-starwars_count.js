@@ -23,7 +23,7 @@ async function doStuff () {
   const body = await req(url).catch(err => { return 0; });
   const json = JSON.parse(body);
 
-  let allPRomises = [];
+  let allPromises = [];
   for (let i = 0; i < json.results.length; i++) {
     const film = json.results[i];
     for (let j = 0; j < film.characters.length; j++) {
@@ -34,6 +34,8 @@ async function doStuff () {
       }).catch(err => {  }));
     }
   }
+
+  await PRomise.all(allPromises);
   /*await request.get(url, (err, res, body) => {
     if (err) {
       throw new Error(err);
