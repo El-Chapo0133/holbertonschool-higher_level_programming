@@ -31,8 +31,8 @@ async function doStuff() {
       				});
     			});
   		};
-		console.log(count);
 	});
+		console.log(count);
 }
 
 doStuff();
