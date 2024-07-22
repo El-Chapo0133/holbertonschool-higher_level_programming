@@ -27,11 +27,11 @@ async function doStuff() {
       				request(character, (err, res, characterBody) => {
         				if (err) { throw new Error(err); } 
         				if (res.statusCode !== 200) { throw new Error('Status Code != 200 : ' + res.statusCode); }
-        				if (JSON.parse(characterBody).name === characterToFind) { correctUrl = character; console.log(character); count++; }
+        				if (JSON.parse(characterBody).name === characterToFind) { correctUrl = character; count++; }
       				});
     			});
   		};
-		// console.log(count);
+		console.log(count);
 	});
 }
 
