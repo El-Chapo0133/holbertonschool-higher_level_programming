@@ -9,7 +9,7 @@ if (args.length < 3) {
 const url = 'https://swapi-api.hbtn.io/api/films';
 const id = parseInt(args[2]) - 1;
 
-async function doStuff() {
+async function doStuff () {
   await request.get(url, (err, res, body) => {
     if (err) {
       throw new Error(err);
