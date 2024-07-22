@@ -20,7 +20,7 @@ function req (url) {
   });
 }
 async function doStuff () {
-  const body = await req(url).catch(err => { return 0; });
+  const body = await req(url).catch(err => { console.error(err); eturn 0; });
   const json = JSON.parse(body);
 
   let allPromises = [];
