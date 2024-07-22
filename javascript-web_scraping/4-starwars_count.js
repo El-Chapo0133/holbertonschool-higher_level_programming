@@ -30,7 +30,7 @@ async function doStuff () {
       const character = film.characters[j];
       allPromises.push(req(character).then(characterBody => {
         const characterJson = JSON.parse(characterBody);
-        if (characterJson.name === characterToFind) { count++; }
+        if (characterJson.name === characterToFind) { console.log("yo"); count++; }
       }).catch(err => {  }));
     }
   }
