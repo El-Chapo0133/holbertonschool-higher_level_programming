@@ -35,7 +35,7 @@ async function doStuff () {
     }
   }
 
-  await PRomise.all(allPromises);
+  await Promise.all(allPromises);
   /*await request.get(url, (err, res, body) => {
     if (err) {
       throw new Error(err);
