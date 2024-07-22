@@ -12,6 +12,6 @@ const filename = args[3];
 
 request(url, (err, res, body) => {
   if (err) { console.error(err); }
-  if (res.statusCode != 200) { console.error(res.statusCode); }
+  if (res.statusCode !== 200) { console.error(res.statusCode); }
   fs.writeFileSync(filename, body);
 });
