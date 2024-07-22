@@ -20,14 +20,14 @@ function req (url) {
   });
 }
 async function doStuff () {
-  const body = await req(url);
+  const body = await req(url).catch(err => { return 0; });
   const json = JSON.parse(body);
 
   for (let i = 0; i < json.results.length; i++) {
     const film = json.results[i];
     for (let j = 0; j < film.characters.length; j++) {
       const character = film.characters[j];
-      const characterBody = await req(character);
+      const characterBody = await req(character).catch(err => { continue; });
       const characterJson = JSON.parse(characterBody);
       if (characterJson.name === characterToFind) { count++; }
     }
