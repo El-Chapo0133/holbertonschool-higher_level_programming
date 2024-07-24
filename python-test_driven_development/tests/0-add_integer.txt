@@ -3,17 +3,19 @@
 This module is documented
 """
 
-
-def add_integer(a, b):
+def add_integer(a, b = 98):
     """Add two integers
     >>> add_integer(1, 2)
     3
     >>> add_integer(3, 4)
     7
     """
-    if (not isinstance(a, int)):
+    if (not isinstance(a, (int, float))):
         raise TypeError("a must be an integer")
-    elif (not isinstance(b, int)):
+    elif (not isinstance(b, (int, float))):
         raise TypeError("b must be an integer")
+
+    a = int(a)
+    b = int(b)
 
     return a + b
