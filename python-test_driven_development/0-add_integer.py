@@ -13,6 +13,6 @@ def add_integer(a, b = 98):
         raise TypeError("b must be an integer")
     if (a == float("inf") or b == float("inf")):
         raise OverflowError("a nor b can be infinity")
-    if (a == float("nan") or b == float("nan")):
+    if (a != a or b != b):
         raise ValueError("a nor b can be NaN")
     return int(a) + int(b)
