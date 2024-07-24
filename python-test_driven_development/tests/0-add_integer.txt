@@ -15,6 +15,10 @@
 >>> add_integer(1.1, 2)
 3
 >>> add_integer("1", 2)
+Traceback (most recent call last):
+...
 a must be an integer
 >>> add_integer(1, "2")
+Traceback (most recent call last):
+...
 b must be an integer
