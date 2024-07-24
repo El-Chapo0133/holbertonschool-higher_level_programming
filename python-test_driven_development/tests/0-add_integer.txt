@@ -6,6 +6,10 @@
 ...        raise TypeError("a must be an integer")
 ...    elif (not isinstance(b, (int, float))):
 ...        raise TypeError("b must be an integer")
+...    if (math.isinf(a) or math.isinf(b)):
+...	   raise OverflowError("cannot convert float infinity to integer")
+...    if (math.isnan(a) or math.isnan(b)):
+...	   raise ValueError("cannot convert float NaN to integer")
 ...    return int(a) + int(b)
 >>> add_integer(1, 2)
 3
@@ -19,3 +23,4 @@ TypeError: a must be an integer
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
+
