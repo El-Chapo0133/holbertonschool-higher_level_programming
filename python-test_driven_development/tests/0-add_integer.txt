@@ -6,7 +6,6 @@
 ...        raise TypeError("a must be an integer")
 ...    elif (not isinstance(b, (int, float))):
 ...        raise TypeError("b must be an integer")
-...
 ...    return int(a) + int(b)
 >>> add_integer(1, 2)
 3
