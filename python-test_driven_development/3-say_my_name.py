@@ -13,4 +13,4 @@ def say_my_name(first="", last=""):
     elif (not isinstance(last, str)):
         print("last_name must be a string")
     else:
-        print("My name is " + first + " " + last)        
+        print("My name is " + first + " " + last)
