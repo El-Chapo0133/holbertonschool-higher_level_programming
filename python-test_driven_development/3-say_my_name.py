@@ -9,7 +9,8 @@ def say_my_name(first="", last=""):
     """
     if (not isinstance(first, str)):
         print("first_name must be a string")
-    if (not isinstance(last, str)):
+    elif (not isinstance(last, str)):
         print("last_name must be a string")
-    print("My name is " + first + " " + last)
+    else:
+        print("My name is " + first + " " + last)
         
