@@ -8,8 +8,8 @@ def say_my_name(first="", last=""):
     This function is documented
     """
     if (not isinstance(first, str)):
-        print("first_name must be string")
+        print("first_name must be a string")
     if (not isinstance(last, str)):
-        print("last_name must be string")
+        print("last_name must be a string")
     print("My name is " + first + " " + last)
         
