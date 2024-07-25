@@ -4,6 +4,9 @@ This module is documented
 """
 
 def say_my_name(first="", last=""):
+    """
+    This function is documented
+    """
     if (last == ""):
         print("My name is " + first)
     else:
