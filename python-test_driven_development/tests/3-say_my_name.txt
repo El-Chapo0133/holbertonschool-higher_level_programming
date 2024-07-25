@@ -5,3 +5,7 @@ My name is John Smith
 My name is Walter White
 >>> say_my_name("Bob")
 My name is Bob 
+>>> say_my_name("Bob", 12)
+last_name must be a string
+>>> say_my_name(12, "Lennon")
+first_name must be a string
