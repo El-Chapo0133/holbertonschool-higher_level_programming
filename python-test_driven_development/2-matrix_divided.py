@@ -21,8 +21,7 @@ def matrix_divided(matrix, div):
     row_length = len(matrix[0])
     for x in matrix:
         if not all(isinstance(ele, (int, float)) for ele in x):
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats
-div must be a number")
+            raise TypeError("matrix must be a matrix (list of lists) of integers/floats div must be a number")
         if len(x) != row_length:
             raise TypeError("Each row of the matrix must have the same size")
 
